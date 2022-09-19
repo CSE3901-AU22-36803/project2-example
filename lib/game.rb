@@ -1,5 +1,5 @@
 require_relative 'player_creator'
-
+require_relative 'deck'
 class Game
 
     def initialize
@@ -13,5 +13,10 @@ class Game
 
     def start
     end
+
+    def deal_card(deck)
+        card = deck.shuffle.first
+        deck = deck - [card]
+        return card
 
 end
